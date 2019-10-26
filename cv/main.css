@@ -1,3 +1,74 @@
+@font-face {
+  font-family: Moreno;
+  src: local("Moreno XThin"),
+       local("Moreno-XThin"),
+       local("MorenoXThin"),
+       url("./fonts/Moreno-XThin.woff");
+  font-weight: 100;
+}
+@font-face {
+  font-family: Moreno;
+  src: local("Moreno Thin"),
+       local("Moreno-Thin"),
+       local("MorenoThin"),
+       url("./fonts/Moreno-Thin.woff");
+  font-weight: 200;
+}
+/*
+@font-face {
+  font-family: Moreno;
+  src: local("Moreno Light"),
+       local("Moreno-Light"),
+       local("MorenoLight"),
+       url("./fonts/Moreno-Light.woff");
+  font-weight: 300;
+}
+*/
+@font-face {
+  font-family: Moreno;
+  src: local("Moreno Regular"),
+       local("Moreno-Regular"),
+       local("MorenoRegular"),
+       url("./fonts/Moreno-Regular.woff");
+  font-weight: 400;
+}
+@font-face {
+  font-family: Moreno;
+  src: local("Moreno Medium"),
+       local("Moreno-Medium"),
+       local("MorenoMedium"),
+       url("./fonts/Moreno-Medium.woff");
+  font-weight: 500;
+}
+/*
+@font-face {
+  font-family: Moreno;
+  src: local("Moreno Semi Bold"),
+       local("Moreno SemiBold"),
+       local("Moreno-Semi-Bold"),
+       local("Moreno-SemiBold"),
+       local("MorenoSemiBold"),
+       url("./fonts/Moreno-SemiBold.woff");
+  font-weight: 600;
+}
+@font-face {
+  font-family: Moreno;
+  src: local("Moreno  Bold"),
+       local("Moreno-Bold"),
+       local("MorenoBold"),
+       url("./fonts/Moreno-Bold.woff");
+  font-weight: 700;
+}
+@font-face {
+  font-family: Moreno;
+  src: local("Moreno  Black"),
+       local("Moreno-Black"),
+       local("MorenoBlack"),
+       url("./fonts/Moreno-Black.woff");
+  font-weight: 800;
+}
+*/
+
 * {
   box-sizing: border-box;
 }
@@ -6,8 +77,9 @@ html,
 body {
   margin: 0;
   color: #3e3e3f;
-  font-family: sans-serif;
-  font-size: 10pt;
+  font-family: Moreno, sans-serif;
+  font-weight: 200;
+  font-size: 9pt;
 }
 
 .page {
@@ -25,27 +97,41 @@ header {
   align-items: flex-end;
 }
 header hgroup {
+  flex-basis: 0;
   flex-grow: 1;
 }
 h1,
 h2 {
   margin: 0;
+  font-weight: inherit;
 }
 h1 {
   font-size: 45pt;
   font-weight: 100;
-  color: #f15922;
+  color: #f15a22;
+}
+h1 img {
+  display: block;
+  width: 7cm;
 }
 h2 {
   color: #387790;
-  font-weight: 100;
-  margin: 0.3cm 0;
+  font-weight: 200;
+  margin: 0.2cm 0;
+  letter-spacing: 0.1em;
+}
+h2:last-child {
+  margin-bottom: -0.1cm;
 }
 
 main {
   margin-top: 1cm;
   column-width: 4.6cm;
   column-gap: 1.5cm;
+}
+
+ul {
+  padding-left: 0.5cm;
 }
 
 a {
@@ -63,17 +149,23 @@ a + span {
 }
 
 h3 {
-  color: #f15922;
+  font-weight: 500;
+  color: #f15a22;
 }
 h3:first-child {
   margin-top: 0;
 }
 
 h4 {
+  font-weight: 400;
   color: #387790;
 }
 
 @media print {
+  * {
+    color: black !important;
+  }
+
   .page {
     width: 16.8cm; /* 21cm - 2.1cm * 2 */
     height: auto;
