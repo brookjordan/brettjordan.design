@@ -80,6 +80,7 @@ body {
   font-family: Moreno, sans-serif;
   font-weight: 200;
   font-size: 9pt;
+  background: #3e3e3f;
 }
 
 .page {
@@ -90,6 +91,7 @@ body {
 
   padding: 2.1cm;
   box-shadow: 0 0.5cm 1cm rgba(0, 0, 0, 0.3);
+  background: white;
 }
 
 header {
@@ -130,8 +132,15 @@ main {
   column-gap: 1.5cm;
 }
 
+p {
+  margin: 0.3cm 0;
+}
+
 ul {
   padding-left: 0.5cm;
+}
+li {
+  margin: 0.15cm 0;
 }
 
 a {
@@ -148,17 +157,33 @@ a + span {
   display: none;
 }
 
+section {
+  break-inside: avoid;
+  margin-top: 0.5cm;
+}
+section:first-child,
+section :first-child {
+  margin-top: 0;
+}
+section :last-child {
+  margin-bottom: 0;
+}
+
+h3,
+h4 {
+  margin: 0;
+}
 h3 {
   font-weight: 500;
   color: #f15a22;
-}
-h3:first-child {
-  margin-top: 0;
 }
 
 h4 {
   font-weight: 400;
   color: #387790;
+}
+h4 + p {
+  margin-top: 0.1cm;
 }
 
 @media (max-width: 21cm) {
@@ -184,6 +209,7 @@ h4 {
     width: 16.8cm; /* 21cm - 2.1cm * 2 */
     margin: 0 auto;
     padding: 0;
+    padding-top: 1.5cm;
     box-shadow: none;
   }
 
