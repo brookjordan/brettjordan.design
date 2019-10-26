@@ -32,13 +32,14 @@ h2 {
   margin: 0;
 }
 h1 {
-  font-size: 40pt;
+  font-size: 45pt;
   font-weight: 100;
   color: #f15922;
 }
 h2 {
   color: #387790;
   font-weight: 100;
+  margin: 0.3cm 0;
 }
 
 main {
@@ -48,6 +49,7 @@ main {
 }
 
 a {
+  display: block;
   color: inherit;
   text-decoration-color: rgba(62, 62, 63, 0.3);
   transition: text-decoration-color 0.15s;
@@ -69,4 +71,21 @@ h3:first-child {
 
 h4 {
   color: #387790;
+}
+
+@media print {
+  .page {
+    width: 16.8cm; /* 21cm - 2.1cm * 2 */
+    height: auto;
+    margin: 0 auto;
+    padding: 0;
+    box-shadow: none;
+  }
+
+  a {
+    display: none;
+  }
+  a + span {
+    display: block;
+  }
 }
