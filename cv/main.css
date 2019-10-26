@@ -1,5 +1,6 @@
 @font-face {
   font-family: Moreno;
+  font-display: swap;
   src: local("Moreno XThin"),
        local("Moreno-XThin"),
        local("MorenoXThin"),
@@ -8,6 +9,7 @@
 }
 @font-face {
   font-family: Moreno;
+  font-display: swap;
   src: local("Moreno Thin"),
        local("Moreno-Thin"),
        local("MorenoThin"),
@@ -17,6 +19,7 @@
 /*
 @font-face {
   font-family: Moreno;
+  font-display: swap;
   src: local("Moreno Light"),
        local("Moreno-Light"),
        local("MorenoLight"),
@@ -26,6 +29,7 @@
 */
 @font-face {
   font-family: Moreno;
+  font-display: swap;
   src: local("Moreno Regular"),
        local("Moreno-Regular"),
        local("MorenoRegular"),
@@ -34,6 +38,7 @@
 }
 @font-face {
   font-family: Moreno;
+  font-display: swap;
   src: local("Moreno Medium"),
        local("Moreno-Medium"),
        local("MorenoMedium"),
@@ -43,6 +48,7 @@
 /*
 @font-face {
   font-family: Moreno;
+  font-display: swap;
   src: local("Moreno Semi Bold"),
        local("Moreno SemiBold"),
        local("Moreno-Semi-Bold"),
@@ -53,6 +59,7 @@
 }
 @font-face {
   font-family: Moreno;
+  font-display: swap;
   src: local("Moreno  Bold"),
        local("Moreno-Bold"),
        local("MorenoBold"),
@@ -61,6 +68,7 @@
 }
 @font-face {
   font-family: Moreno;
+  font-display: swap;
   src: local("Moreno  Black"),
        local("Moreno-Black"),
        local("MorenoBlack"),
