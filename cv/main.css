@@ -85,7 +85,7 @@ body {
 .page {
   /* 4.6*3 + 1.5*2 + 2.1*2 */
   width: 21cm;
-  height: 29.7cm;
+  /* height: 29.7cm; */
   margin: 2cm auto;
 
   padding: 2.1cm;
@@ -161,6 +161,20 @@ h4 {
   color: #387790;
 }
 
+@media (max-width: 21cm) {
+  .page {
+    width: auto;
+    padding: 10vmin;
+    margin: 0 auto;
+    box-shadow: none;
+  }
+
+  h1 img {
+    max-width: 35vw;
+    min-width: 150px;
+  }
+}
+
 @media print {
   * {
     color: black !important;
@@ -168,7 +182,6 @@ h4 {
 
   .page {
     width: 16.8cm; /* 21cm - 2.1cm * 2 */
-    height: auto;
     margin: 0 auto;
     padding: 0;
     box-shadow: none;
