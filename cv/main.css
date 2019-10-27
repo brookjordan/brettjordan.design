@@ -89,6 +89,14 @@ body {
   font-weight: 200;
   font-size: 9pt;
   background: #3e3e3f;
+  background:
+    fixed
+    radial-gradient(
+      circle farthest-corner at 50% 150%,
+      #f15a22,
+      #3e3e3f 50%,
+      #387790 130%
+    );
   line-height: 1.3;
 }
 
