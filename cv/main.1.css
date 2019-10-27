@@ -9,7 +9,7 @@
 */
 @font-face {
   font-family: Moreno;
-  font-display: swap;
+  font-display: block;
   src: local("Moreno XThin"),
        local("Moreno-XThin"),
        local("MorenoXThin"),
@@ -137,12 +137,25 @@ h2 {
   font-weight: inherit;
 }
 h1 {
+  position: relative;
   font-size: 45pt;
   font-weight: 100;
   color: #f15a22;
 }
+h1 span {
+  position: absolute;
+  margin-top: 0.5cm;
+  line-height: 0.5;
+  color: transparent;
+  font-size: 2.5cm;
+  letter-spacing: -0.5cm;
+}
+h1 span:first-letter {
+  margin-left: 0.6cm;
+}
 h1 img {
   display: block;
+  pointer-events: none;
   width: 7cm;
 }
 h2 {
@@ -162,7 +175,7 @@ main {
 }
 
 p {
-  margin: 0.24cm 0;
+  margin: 0.20cm 0;
 }
 
 ul {
@@ -173,7 +186,6 @@ li {
 }
 
 a {
-  display: block;
   color: inherit;
   text-decoration-color: rgba(62, 62, 63, 0.3);
   transition: text-decoration-color 0.15s;
@@ -181,8 +193,15 @@ a {
 a:hover {
   text-decoration-color: initial;
 }
-
-a + span {
+.link {
+  line-height: 0.7cm;
+}
+.link svg {
+  width: 0.5cm;
+  margin-right: 0.05cm;
+  vertical-align: middle;
+}
+.link a + span {
   display: none;
 }
 
@@ -263,6 +282,14 @@ h4 + p {
     color: black !important;
   }
 
+  h1 span {
+    display: none;
+  }
+
+  small {
+    font-weight: 100;
+  }
+
   .page {
     width: 16.8cm; /* 21cm - 2.1cm * 2 */
     margin: 0 auto;
@@ -271,10 +298,18 @@ h4 + p {
     box-shadow: none;
   }
 
-  a {
+  .link {
+    line-height: 0.5cm;
+    letter-spacing: -0.01cm;
+  }
+  .link svg {
+    width: 0.3cm;
+    vertical-align: baseline;
+  }
+  .link a {
     display: none;
   }
-  a + span {
-    display: block;
+  .link a + span {
+    display: inline;
   }
 }
