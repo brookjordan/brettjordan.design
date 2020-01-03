@@ -169,7 +169,7 @@ h2:last-child {
 
 main {
   margin-top: 1cm;
-  column-width: 5cm;
+  column-width: 4.99cm;
   column-gap: 0.9cm;
 }
 
@@ -206,9 +206,9 @@ a:hover {
 
 section {
   break-inside: avoid;
-  margin-top: 0.8cm;
+  padding-bottom: 0.8cm;
 }
-section:first-child,
+
 section :first-child {
   margin-top: 0;
 }
